@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --beige: #f8f5ec;
+    --dark-blue: #0b3776;
+    --blue: #25b4fb;
+    --white: #fff;
+    --black: #000;
+}
+
+body {
+    background-color: var(--beige);
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: var(--beige);
+}
