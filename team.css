@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --beige: #f8f6ec;
+    --dark-blue: #162b5d;
+    --blue: #2b9dfe;
+    --sky-blue: #8accdd;
+    --blue-sapphire: #156187;
+    --white: #fff;
+    --black: #000;
+}
+
+body {
+    background-color: var(--beige);
+    font-family: 'HelveticaNeue-Light', "Helvetica Neue Light", 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: var(--beige);
+}
