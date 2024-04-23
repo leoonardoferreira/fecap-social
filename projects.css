@@ -42,6 +42,8 @@ header a {
 
 main {
     padding: 16px;
+   
+
 }
 
 section {
@@ -69,3 +71,11 @@ footer {
 footer img {
     display: block;
 }
+
+.main{
+    padding: 10px;
+    display: flex;
+    justify-items: center;
+}
+
+
