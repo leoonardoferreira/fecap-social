@@ -15,6 +15,10 @@
     --black: #000;
 }
 
+li {
+    list-style: none;
+}
+
 body {
     background-color: var(--white);
     font-family: 'Roboto', sans-serif;
@@ -22,12 +26,16 @@ body {
 
 header {
     height: 70vh;
+    padding: 2rem 2rem 3rem;
+
     border-end-end-radius: 16px;
     border-end-start-radius: 16px;
-    /* text-align: center; */
-    padding: 1rem;
     background-color: var(--blue);
     color: var(--black);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -36,9 +44,6 @@ nav ul {
     margin-bottom: 1.5rem;
 }
 
-li {
-    list-style: none;
-}
 
 header a {
     color: var(--white);
@@ -55,7 +60,7 @@ span.green {
 }
 
 main {
-    padding: 16px;
+    padding: 1rem;
 }
 
 section {
@@ -64,13 +69,39 @@ section {
     border-radius: 16px;
 }
 
-section:hover {
-    background-color: var(--fecap-green);
-}
-
 h2 {
     margin-bottom: 1rem;
     font-size: 1.75rem ;
+}
+
+section.mission {
+    color: var(--black);
+    background-color: var(--beige);
+    padding: 1rem 3rem 2rem;
+    margin: 0 -1rem;
+    border-radius: 0;
+}
+
+section.mission>p {
+    font-family: 'Roboto Slab', serif;
+    font-style: italic;
+
+}
+
+ul.values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+ul.values>li {
+    color: var(--white);
+    background-color: var(--blue-sapphire);
+
+    padding: 1rem;
+    border-radius: 1.5rem;
+
+    font-weight: bold;
 }
 
 p {
@@ -79,28 +110,48 @@ p {
 
 footer {
     background-color: var(--dark-blue);
-    padding: 1rem 2rem;
     color: var(--beige);
-    text-align: center;
+
+    padding: 2rem 2rem 4rem;
+
     border-start-end-radius: 16px;
     border-start-start-radius: 16px;
 }
 
-footer a {
-    color: var(--white);
+footer>p {
+    margin-bottom: 3rem;
 }
 
-footer a>img {
-    max-width: 1.5rem;
+footer a {
+    color: var(--white);
+    font-weight: bold;
 }
 
 footer>img {
     display: block;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+footer a>img {
+    width: 1.5rem;
 }
 
 footer ul {
     display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
 }
+
+footer>a {
+    font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+    text-align: center;
+    display: block;
+}
+
+
 
 /* cores do lgbtqi+ */
 
@@ -126,4 +177,9 @@ span#q {
 
 span#i {
     color: #732982;
+}
+
+.condensed {
+    font-style: italic;
+    font-family: 'Roboto Slab';
 }
