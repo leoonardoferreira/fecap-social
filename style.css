@@ -19,23 +19,29 @@ li {
     list-style: none;
 }
 
+p {
+    font-size: clamp(1rem, 1rem + 3vw, 1.25rem);
+}
+
 body {
     background-color: var(--white);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 header {
-    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    
+    min-height: 70vh;
     padding: 2rem 2rem 3rem;
 
     border-end-end-radius: 16px;
     border-end-start-radius: 16px;
-    background-color: var(--blue);
-    color: var(--black);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: var(--blue);
+    color: var(--dark-blue);
 }
 
 nav ul {
@@ -46,17 +52,17 @@ nav ul {
 
 
 header a {
-    color: var(--white);
+    color: var(--dark-blue);
+    font-weight: bold;
 }
 
 h1>span {
-    font-style: italic;
+    background-color: var(--white);
 }
 
 span.green {
     background-color: var(--fecap-green);
     color: var(--white);
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
 main {
@@ -66,13 +72,178 @@ main {
 section {
     margin-bottom: 1rem;
     padding: 1rem 2rem;
-    border-radius: 16px;
 }
 
 h2 {
     margin-bottom: 1rem;
-    font-size: 1.75rem ;
+    font-size: 1.75rem;
 }
+
+div.li-teams {
+    display: flex;
+    justify-content: center;   
+    
+    margin: 1rem 0;
+}
+
+div.li-teams ul li {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+div.projects-carousel {
+    display: flex;
+    overflow-x: auto;
+}
+
+
+div.projects-carousel div {
+    height: 70vh;
+    width: 90%;
+
+    margin-right: .625rem;
+    flex-shrink: 0;
+
+    background-color: #ebebeb;
+
+    display: flex;
+    justify-content: flex-end;
+
+    border-radius: 16px;
+}
+
+div.projects-carousel>div:first-child {
+    background-image: url(img/pascoa-solidaria-1.jpeg);
+    background-size: cover;
+    background-repeat: 0;
+}
+
+div.projects-carousel>div:nth-child(2) {
+    background-image: url(img/hamburgada-feliz-1.jpeg);
+    background-size: cover;
+    background-repeat: 0;
+}
+
+
+
+div.projects-carousel>div:last-child {
+    margin-right: 0;
+    background-image: url(img/trote-solidario-1.jpeg);
+
+    background-size: cover;
+    background-position: center;
+}
+
+div.projects-carousel>div>a {
+    height: 100%;
+    width: 100%;
+
+
+    text-align: center;
+
+    text-decoration: none;
+    color: #162b5d;
+
+    font-weight: bold;
+    
+}
+
+div.projects-carousel>div>a>p {
+    margin-top: 1.5rem;
+    background-color: #fff;
+    width: fit-content;
+    text-align: center;
+    padding: .5rem;
+
+    border-start-end-radius: 1.5rem;
+    border-end-end-radius: 1.5rem;
+}
+
+section.team-mural-wrapper {
+    text-align: center;
+}
+
+div.team-mural {
+    position: relative;
+    height: 600px;
+    width: 20rem;
+
+    margin: 0 auto 1rem;
+}
+
+.pfp {
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    display: block;
+}
+
+.pfp-1 {
+    top: 45%;
+    left: 35%;
+}
+
+.pfp-2 {
+    top: 75%;
+    left: 67%;
+}
+
+.pfp-3 {
+    top: 20%;
+}
+
+.pfp-4 {
+    top: 10%;
+    left: 27%;
+}
+
+.pfp-5 {
+    left: 55%;
+}
+
+.pfp-6 {
+    top: 38%;
+    left: 3%;
+}
+
+.pfp-7 {
+    top: 65%;
+    left: 30%;
+}
+
+.pfp-8 {
+    top: 16%;
+    left: 68%;
+}
+
+.pfp-9 {
+    top: 40%;
+    left: 67%;
+}
+
+.pfp-10 {
+    top: 83%;
+    left: 20%;
+}
+
+.pfp-11 {
+    top: 58%;
+}
+
+.pfp-12 {
+    top: 27%;
+    left: 37%;
+}
+
+.pfp-13 {
+    top: 57%;
+    left: 60%;
+}
+
+section.team-mural-wrapper>a {
+    color: var(--dark-blue);
+}
+
 
 section.mission {
     color: var(--black);
@@ -104,9 +275,6 @@ ul.values>li {
     font-weight: bold;
 }
 
-p {
-    font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
-}
 
 footer {
     background-color: var(--dark-blue);
@@ -146,7 +314,7 @@ footer ul {
 }
 
 footer>a {
-    font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+    font-size: clamp(1rem, 1rem + 1vw, 1.25rem);
     text-align: center;
     display: block;
 }
@@ -177,9 +345,4 @@ span#q {
 
 span#i {
     color: #732982;
-}
-
-.condensed {
-    font-style: italic;
-    font-family: 'Roboto Slab';
 }

@@ -15,19 +15,33 @@
     --black: #000;
 }
 
+li {
+    list-style: none;
+}
+
+p {
+    font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+}
+
 body {
     background-color: var(--white);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 header {
-    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    
+    min-height: 70vh;
+    padding: 2rem 2rem 3rem;
+
     border-end-end-radius: 16px;
     border-end-start-radius: 16px;
-    /* text-align: center; */
-    padding: 1rem;
+
     background-color: var(--blue);
-    color: var(--black);
+    color: var(--dark-blue);
 }
 
 nav ul {
@@ -36,36 +50,19 @@ nav ul {
     margin-bottom: 1.5rem;
 }
 
-li {
-    list-style: none;
-}
 
 header a {
-    color: var(--white);
-}
-
-h1>span {
-    font-style: italic;
-}
-
-span.green {
-    background-color: var(--fecap-green);
-    color: var(--white);
-    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--dark-blue);
+    font-weight: bold;
 }
 
 main {
-    padding: 16px;
+    padding: 1rem;
 }
 
 section {
     margin-bottom: 1rem;
     padding: 1rem 2rem;
-    border-radius: 16px;
-}
-
-section:hover {
-    background-color: var(--fecap-green);
 }
 
 h2 {
@@ -73,28 +70,46 @@ h2 {
     font-size: 1.75rem ;
 }
 
-p {
-    font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
-}
 
 footer {
     background-color: var(--dark-blue);
     color: var(--beige);
-    text-align: center;
+
+    padding: 2rem 2rem 4rem;
+
     border-start-end-radius: 16px;
     border-start-start-radius: 16px;
 }
 
+footer>p {
+    margin-bottom: 3rem;
+}
+
 footer a {
     color: var(--white);
+    font-weight: bold;
+}
+
+footer>img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
 }
 
 footer a>img {
-    max-width: 1.5rem;
+    width: 1.5rem;
 }
 
-footer img {
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+footer>a {
+    font-size: clamp(1rem, 1rem + 1vw, 1.25rem);
+    text-align: center;
     display: block;
 }
-
-
