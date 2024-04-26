@@ -41,12 +41,17 @@ header {
     color: var(--dark-blue);
 }
 
+
 nav ul {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.5rem;
 }
 
+header>div, nav ul {
+    max-width: 48rem;
+    margin: 0 auto;
+}
 
 header a {
     color: var(--dark-blue);
@@ -212,6 +217,21 @@ footer>a {
     text-align: center;
     display: block;
 }
+
+/* barra de scroll em naegadores q usam motor do google */
+
+::-webkit-scrollbar {
+    width: 1.125rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c8c8c8;
+    background-clip: content-box;
+    border: 6px solid transparent;
+    border-radius: .625rem;
+}
+
+/* responsividade */
 
 @media(min-width:768px) {
     header {

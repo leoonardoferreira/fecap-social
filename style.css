@@ -50,6 +50,10 @@ nav ul {
     margin-bottom: 1.5rem;
 }
 
+header>div, nav ul {
+    max-width: 48rem;
+    margin: 0 auto;
+}
 
 header a {
     color: var(--dark-blue);
@@ -71,11 +75,24 @@ span.green {
 
 main {
     padding: 1rem;
+    /* width: clamp(18.75rem, 18.75rem + 100vw, 40rem); */
+    margin: 0 auto;
+}
+
+main>section:first-of-type img {
+    max-width: 31.25rem;
+    margin: 0 auto;
+    display: block;
 }
 
 section {
     margin-bottom: 1rem;
     padding: 1rem 2rem;
+}
+
+section.whoarewe, section.ourhistory {
+    max-width: 50rem;
+    margin: 0 auto;
 }
 
 h2 {
@@ -93,6 +110,11 @@ div.li-teams {
 div.li-teams ul li {
     margin-bottom: 1rem;
     text-align: center;
+}
+
+section.projects {
+    max-width: 56.25rem;
+    margin: 0 auto;
 }
 
 div.projects-carousel {
@@ -248,37 +270,6 @@ section.team-mural-wrapper>a {
 }
 
 
-section.mission {
-    color: var(--black);
-    background-color: var(--beige);
-    padding: 1rem 3rem 2rem;
-    margin: 0 -1rem;
-    border-radius: 0;
-}
-
-section.mission>p {
-    font-family: 'Roboto Slab', serif;
-    font-style: italic;
-
-}
-
-ul.values {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-}
-
-ul.values>li {
-    color: var(--white);
-    background-color: var(--blue-sapphire);
-
-    padding: 1rem;
-    border-radius: 1.5rem;
-
-    font-weight: bold;
-}
-
-
 footer {
     background-color: var(--dark-blue);
     color: var(--beige);
@@ -324,7 +315,18 @@ footer>a {
     display: block;
 }
 
+/* barra de scroll em naegadores q usam motor do google */
 
+::-webkit-scrollbar {
+    width: 1.125rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c8c8c8;
+    background-clip: content-box;
+    border: 6px solid transparent;
+    border-radius: .625rem;
+}
 
 /* cores do lgbtqi+ */
 
@@ -352,6 +354,8 @@ span#i {
     color: #732982;
 }
 
+/* responsividade */
+
 @media(max-width: 375px) {
     div.team-mural {
         display: none;
@@ -359,6 +363,10 @@ span#i {
 }
 
 @media(min-width:768px) {
+    header {
+        justify-content: space-around;
+    }
+
     nav ul {
         justify-content: space-evenly;
     }
@@ -383,4 +391,3 @@ span#i {
         justify-content: center;
     }
 }
-
