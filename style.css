@@ -56,6 +56,10 @@ header a {
     font-weight: bold;
 }
 
+h1 {
+    font-size: clamp(2rem, 2rem + 1vw, 4rem);
+}
+
 h1>span {
     background-color: var(--white);
 }
@@ -116,6 +120,7 @@ div.projects-carousel>div:first-child {
     background-image: url(img/pascoa-solidaria-1.jpeg);
     background-size: cover;
     background-repeat: 0;
+    background-position: center;
 }
 
 div.projects-carousel>div:nth-child(2) {
@@ -123,7 +128,6 @@ div.projects-carousel>div:nth-child(2) {
     background-size: cover;
     background-repeat: 0;
 }
-
 
 
 div.projects-carousel>div:last-child {
@@ -138,11 +142,10 @@ div.projects-carousel>div>a {
     height: 100%;
     width: 100%;
 
-
     text-align: center;
 
     text-decoration: none;
-    color: #162b5d;
+    color: var(--dark-blue);
 
     font-weight: bold;
     
@@ -165,7 +168,7 @@ section.team-mural-wrapper {
 
 div.team-mural {
     position: relative;
-    height: 600px;
+    height: 37.5rem;
     width: 20rem;
 
     margin: 0 auto 1rem;
@@ -174,7 +177,7 @@ div.team-mural {
 .pfp {
     position: absolute;
     border-radius: 50%;
-    width: 100px;
+    width: 6.25rem;
     display: block;
 }
 
@@ -284,6 +287,8 @@ footer {
 
     border-start-end-radius: 16px;
     border-start-start-radius: 16px;
+
+    text-align: center;
 }
 
 footer>p {
@@ -346,3 +351,36 @@ span#q {
 span#i {
     color: #732982;
 }
+
+@media(max-width: 375px) {
+    div.team-mural {
+        display: none;
+    }
+}
+
+@media(min-width:768px) {
+    nav ul {
+        justify-content: space-evenly;
+    }
+
+    header>div {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    header>div>* {
+        flex-basis: 1;
+    }
+
+    main {
+        padding: 1rem 5rem;
+    }
+
+    section:nth-of-type(2)>div {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
