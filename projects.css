@@ -48,9 +48,18 @@ li {
     list-style: none;
 }
 
+header>div, nav ul {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
 header a {
     color: var(--dark-blue);
     font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(2rem, 2rem + 1vw, 4rem);
 }
 
 h1>span {
@@ -64,15 +73,52 @@ main {
 section {
     margin-bottom: 1rem;
     padding: 1rem 2rem;
+    max-width: 25rem;
+    margin: 0 auto;
 }
 
 h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 1.5rem + 1vw, 1.9rem);
+}
+
+div {
     margin-bottom: 1rem;
-    font-size: 1.75rem ;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.25rem, 1.25rem + 1vw, 1.6rem);
 }
 
 p {
     font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+}
+
+div.project-mural {
+    width: 100%;
+    text-align: justify;
+}
+
+div.project-mural img {
+    max-width: 49%;
+
+    border-radius: 10px;
+}
+
+main ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+main ul>li {
+    background-color: var(--blue);
+
+    padding: 1rem;
+    border-radius: 1.5rem;
+
+    font-weight: bold;
 }
 
 footer {
@@ -80,6 +126,8 @@ footer {
     color: var(--beige);
 
     padding: 2rem 2rem 4rem;
+
+    text-align: center;
 
     border-start-end-radius: 16px;
     border-start-start-radius: 16px;
@@ -116,4 +164,65 @@ footer>a {
     font-size: clamp(1rem, 1rem + 1vw, 1.25rem);
     text-align: center;
     display: block;
+}
+
+/* barra de scroll em naegadores q usam motor do google */
+
+::-webkit-scrollbar {
+    width: 1.125rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c8c8c8;
+    background-clip: content-box;
+    border: 6px solid transparent;
+    border-radius: .625rem;
+}
+
+/* responsividade */
+
+@media(min-width:768px) {
+    header {
+        justify-content: space-around;
+    }
+
+    nav ul {
+        justify-content: space-evenly;
+    }
+
+    header>div {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    main {
+        padding: 1rem 5rem;
+    }
+
+    div.left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 1024px) {
+    header {
+        padding: 2rem 10rem 3rem;
+    }
+
+    main {
+        max-width: 48rem;
+        margin: 0 auto;
+        padding: 1rem 5rem;
+    }
+}
+
+@media(min-width: 1440px) {
+    main {
+        display: flex;
+        max-width: 100rem;
+        padding: 1rem 7rem;
+    }
 }

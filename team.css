@@ -15,11 +15,6 @@
     --black: #000;
 }
 
-li {
-    list-style: none;
-}
-
-
 body {
     background-color: var(--white);
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -46,6 +41,10 @@ nav ul {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.5rem;
+}
+
+li {
+    list-style: none;
 }
 
 header>div, nav ul {
@@ -101,7 +100,6 @@ section:first-of-type {
 section:last-of-type {
     margin-bottom: 0;
 }
-
 
 h2 {
     margin-bottom: 1rem;
